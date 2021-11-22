@@ -1,0 +1,27 @@
+{% extends "./base.html" %}
+{% block title %}view my jobs{% endblock title %}}
+
+{% block body %}
+
+<div style="margin-top: 70px;" class="container">
+ <h3>My All jobs</h3>
+{% for i in all_jobs %}
+    <div class="card" style="margin: 5px;">
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Job Name : {{i.job_name}}</h5>
+        <h4>Experience : {{i.experience}}</h4>
+        <h4>Open Position : {{i.open_position}}</h4>
+        <p class="card-text">Job Description : {{i.job_desc}}</p>
+        <a href="#" class="btn btn-primary">view all applicant</a>
+    </div>
+    </div>
+{% endfor %}
+
+
+</div>
+
+
+{% endblock body %}

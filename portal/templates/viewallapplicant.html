@@ -1,0 +1,21 @@
+{% extends "./base.html" %}
+{% block title %}all applicant{% endblock title %}
+
+{% block body %}
+
+<div style="margin-top: 70px;" class="container">
+ <h3>View all applicant</h3>
+
+
+{% for i in data %}
+<ul class="list-group list-group-horizontal-md">
+  <li class="list-group-item">Name : {{i.user}}</li>
+  <li class="list-group-item"><iframe src="{{i.resume}}" style="width:600px; height:500px;" frameborder="0"></iframe></li>
+  <li class="list-group-item"><a href="/sucessfullyshortlistcandident/{{i.id}}" class="btn btn-primary">shortlist candident</a></li>
+</ul>
+{% endfor %}
+
+</div>
+
+
+{% endblock body %}

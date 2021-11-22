@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+{% block title %}view my jobs{% endblock title %}}
+
+{% block body %}
+
+<div style="margin-top: 70px;" class="container">
+ <h3>Apply Now</h3>
+
+
+
+        <div class="d-flex justify-content-center mt20">
+            <form method="POST" action="/sucessfullyApply/{{id}}" enctype="multipart/form-data">  
+            {% csrf_token %}
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="file" name="resume" required accept="application/pdf,application/vnd.ms-excel" />
+              </div>
+
+              <div class="d-flex justify-content-center mt-3 login_container">
+                <button type="submit" value="Upload" name="button" class="btn login_btn">Apply</button>
+              </div>
+            </form>
+        </div>
+
+
+</div>
+
+
+{% endblock body %}
